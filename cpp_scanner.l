@@ -35,7 +35,8 @@ default {printf("TOKEN <KW_DEFAULT, %s>\n", yytext);}
 \"[^\"\n"]*\" {printf("TOKEN <STRING, %s>\n", yytext);}
 
 ">"|"<"|">="|"<="|"=="|"!=" {printf("TOKEN <OPERATOR, %s>\n", yytext);}
-"+"|"-"|"/"|"%"|"*"|"=" {printf("TOKEN <MATH_OP, %s>\n", yytext);}
+"+"|"-"|"/"|"%"|"*" {printf("TOKEN <MATH_OP, %s>\n", yytext);}
+"=" {printf("TOKEN <ASSIGN_OP, %s>\n", yytext);}
 "&&"|"||" {printf("TOKEN <LOGIC_OP, %s>\n", yytext);}
 
 "(" {printf("TOKEN <LPAREN, %s>\n", yytext);}
@@ -45,7 +46,7 @@ default {printf("TOKEN <KW_DEFAULT, %s>\n", yytext);}
 "[" {printf("TOKEN <LBRACKET, %s>\n", yytext);}
 "]" {printf("TOKEN <RBRACKET, %s>\n", yytext);}
 
-& {printf("TOKEN <ADD_OP, %s>\n", yytext);}
+& {printf("TOKEN <ADR_OP, %s>\n", yytext);}
 
 {NUMBER}    { printf("TOKEN <NUM, %s>\n", yytext); }
 [a-zA-Z_][a-zA-Z0-9_]* {printf("TOKEN <ID, %s>\n", yytext);}

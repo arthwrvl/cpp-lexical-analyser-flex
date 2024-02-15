@@ -282,22 +282,22 @@ static void yy_fatal_error YY_PROTO(( yyconst char msg[] ));
 	*yy_cp = '\0'; \
 	yy_c_buf_p = yy_cp;
 
-#define YY_NUM_RULES 33
-#define YY_END_OF_BUFFER 34
+#define YY_NUM_RULES 34
+#define YY_END_OF_BUFFER 35
 static yyconst short int yy_accept[114] =
     {   0,
-        0,    0,   34,   32,   33,   32,   32,   20,   28,   22,
-       23,   29,   31,   19,   20,   19,   30,   26,   27,   30,
-       30,   30,   30,   30,   30,   30,   30,   30,   30,   24,
-       32,   25,   32,   19,    0,   18,   21,    0,   29,    0,
-       30,   30,   30,   30,   30,   30,    6,   30,   30,   30,
-        2,   30,   30,   30,   30,   30,    0,   29,    0,   29,
-       30,   30,   30,   30,   30,   30,   30,   30,    4,    8,
-       30,   30,   30,   30,    0,   30,   14,   10,   30,   30,
-       30,    3,   30,   30,   30,   12,   30,    0,   15,   30,
-       30,   30,    9,   30,   30,    5,    0,   30,   30,   11,
+        0,    0,   35,   33,   34,   33,   33,   20,   29,   23,
+       24,   30,   32,   19,   21,   19,   31,   27,   28,   31,
+       31,   31,   31,   31,   31,   31,   31,   31,   31,   25,
+       33,   26,   33,   19,    0,   18,   22,    0,   30,    0,
+       31,   31,   31,   31,   31,   31,    6,   31,   31,   31,
+        2,   31,   31,   31,   31,   31,    0,   30,    0,   30,
+       31,   31,   31,   31,   31,   31,   31,   31,    4,    8,
+       31,   31,   31,   31,    0,   31,   14,   10,   31,   31,
+       31,    3,   31,   31,   31,   12,   31,    0,   15,   31,
+       31,   31,    9,   31,   31,    5,    0,   31,   31,   11,
 
-       13,    7,    0,   30,   17,    0,   16,    0,    0,    0,
+       13,    7,    0,   31,   17,    0,   16,    0,    0,    0,
         0,    1,    0
     } ;
 
@@ -788,69 +788,74 @@ YY_RULE_SETUP
 case 21:
 YY_RULE_SETUP
 #line 39 "cpp_scanner.l"
-{printf("TOKEN <LOGIC_OP, %s>\n", yytext);}
+{printf("TOKEN <ASSIGN_OP, %s>\n", yytext);}
 	YY_BREAK
 case 22:
 YY_RULE_SETUP
-#line 41 "cpp_scanner.l"
-{printf("TOKEN <LPAREN, %s>\n", yytext);}
+#line 40 "cpp_scanner.l"
+{printf("TOKEN <LOGIC_OP, %s>\n", yytext);}
 	YY_BREAK
 case 23:
 YY_RULE_SETUP
 #line 42 "cpp_scanner.l"
-{printf("TOKEN <RPAREN, %s>\n", yytext);}
+{printf("TOKEN <LPAREN, %s>\n", yytext);}
 	YY_BREAK
 case 24:
 YY_RULE_SETUP
 #line 43 "cpp_scanner.l"
-{printf("TOKEN <LBRACES, %s>\n", yytext);}
+{printf("TOKEN <RPAREN, %s>\n", yytext);}
 	YY_BREAK
 case 25:
 YY_RULE_SETUP
 #line 44 "cpp_scanner.l"
-{printf("TOKEN <RBRACES, %s>\n", yytext);}
+{printf("TOKEN <LBRACES, %s>\n", yytext);}
 	YY_BREAK
 case 26:
 YY_RULE_SETUP
 #line 45 "cpp_scanner.l"
-{printf("TOKEN <LBRACKET, %s>\n", yytext);}
+{printf("TOKEN <RBRACES, %s>\n", yytext);}
 	YY_BREAK
 case 27:
 YY_RULE_SETUP
 #line 46 "cpp_scanner.l"
-{printf("TOKEN <RBRACKET, %s>\n", yytext);}
+{printf("TOKEN <LBRACKET, %s>\n", yytext);}
 	YY_BREAK
 case 28:
 YY_RULE_SETUP
-#line 48 "cpp_scanner.l"
-{printf("TOKEN <ADD_OP, %s>\n", yytext);}
+#line 47 "cpp_scanner.l"
+{printf("TOKEN <RBRACKET, %s>\n", yytext);}
 	YY_BREAK
 case 29:
 YY_RULE_SETUP
-#line 50 "cpp_scanner.l"
-{ printf("TOKEN <NUM, %s>\n", yytext); }
+#line 49 "cpp_scanner.l"
+{printf("TOKEN <ADR_OP, %s>\n", yytext);}
 	YY_BREAK
 case 30:
 YY_RULE_SETUP
 #line 51 "cpp_scanner.l"
-{printf("TOKEN <ID, %s>\n", yytext);}
+{ printf("TOKEN <NUM, %s>\n", yytext); }
 	YY_BREAK
 case 31:
 YY_RULE_SETUP
 #line 52 "cpp_scanner.l"
-{printf("TOKEN <SEMICOLON, ;>\n");}
+{printf("TOKEN <ID, %s>\n", yytext);}
 	YY_BREAK
 case 32:
 YY_RULE_SETUP
 #line 53 "cpp_scanner.l"
-{}
+{printf("TOKEN <SEMICOLON, ;>\n");}
 	YY_BREAK
 case 33:
 YY_RULE_SETUP
-#line 55 "cpp_scanner.l"
+#line 54 "cpp_scanner.l"
+{}
+	YY_BREAK
+case 34:
+YY_RULE_SETUP
+#line 56 "cpp_scanner.l"
 ECHO;
 	YY_BREAK
-#line 854 "lex.yy.c"
+#line 859 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1738,7 +1743,7 @@ int main()
 	return 0;
 	}
 #endif
-#line 55 "cpp_scanner.l"
+#line 56 "cpp_scanner.l"
 
 
 int yywrap(void){}
