@@ -1,5 +1,3 @@
-//example program to be lexically analysed
-
 #include <stdio.h>
 
 int main(){
